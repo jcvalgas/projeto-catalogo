@@ -1,4 +1,4 @@
-# Projeto Pokedex - Semana 02 - Blue Edtech
+# Projeto Catalogo - Semana 03 - Blue Edtech
 
 ## Descrição de Projeto
 Este projeto foi feito com fins de aprendizagem no curso de Fullstack (ênfase em backend) na Blue.
