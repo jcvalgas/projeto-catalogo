@@ -2,7 +2,7 @@ import express from 'express'
 import  path  from 'path'
 import {routes} from './src/routes/routes.js'
 
-const port = process.env.port || 3002
+const port = process.env.PORT || 3002
 const app = express()
 const __dirname = path.resolve(path.dirname(''))
 
