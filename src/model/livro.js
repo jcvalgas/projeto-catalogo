@@ -34,3 +34,7 @@ export const books = connection.define('books', {
     updatedAt: false,
     timestamps: false
 })
+
+const initTable = async () => {
+    await books.sync()
+}
