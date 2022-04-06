@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title> Criar </title>
+</head>
+<body>
+    <%- include('./partials/header.ejs') %> 
+    <main>
+        <div class="box-container">
+            <form action="/create" method="post">
+                <fieldset>
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" placeholder="Nome">
+                </fieldset>
+                
+                <fieldset>
+                    <label for="capa">URL Capa</label>
+                    <input type="url" name="capa" placeholder="URL">
+                </fieldset>
+                
+                <fieldset>
+                    <label for="ano_l">Data de Lançamento</label>
+                    <input type="text" name="ano_l" placeholder="Lançamento">
+                </fieldset>
+                
+                <fieldset>
+                    <label for="autor">Autor</label>
+                    <input type="text" name="autor" placeholder="Autor">
+                </fieldset>
+    
+                <fieldset>
+                    <label for="sinopse">Sinopse</label>
+                    <input type="text" name="sinopse" placeholder="Descrição">
+                </fieldset>
+    
+                <div id="btn-container">
+                    <button type="submit"> Enviar </button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <%- include('./partials/footer.ejs') %> 
+</body>
+</html>

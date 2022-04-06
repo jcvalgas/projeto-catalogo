@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title> Criar </title>
+</head>
+<body>
+    <%- include('./partials/header.ejs') %>
+    <h1>Editar <%= livros.nome%></h1>
+    <main>
+        <div class="box-container">
+            <form action="/edit/<%= livros.id %>" method="post">
+                <fieldset>
+                    <label for="nome"> Nome </label>
+                    <input type="text" name="nome" value="<%= livros.nome %>" placeholder="<%= livros.nome %>">
+                </fieldset>
+                
+                <fieldset>
+                    <label for="capa"> Ano </label>
+                    <input type="url" name="capa" value="<%= livros.capa %>">
+                </fieldset>
+                
+                <fieldset>
+                    <label for="ano_l"> Img </label>
+                    <input type="text" name="ano_l" value="<%= livros.ano_l %> ">
+                </fieldset>
+                
+                <fieldset>
+                    <label for="autor"> Autor </label>
+                    <input type="text" name="autor" value="<%= livros.autor %> ">
+                </fieldset>
+
+                <fieldset>
+                    <label for="sinopse"> Sinopse </label>
+                    <input type="text" name="sinopse" value=" <%= livros.sinopse %> ">
+                </fieldset>
+
+                <div id="btn-container">
+                    <button type="submit"> Enviar </button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

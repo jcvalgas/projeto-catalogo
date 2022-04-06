@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/2232/2232688.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&family=Smooch+Sans:wght@200&display=swap" rel="stylesheet">
+    <title>QuAsAr Blib.</title>
+</head>
+<body>
+    <%- include('./partials/header.ejs') %> 
+    <section id="title">
+        <div class="fade-main">
+            <div class="chamada">
+                <div id="container">
+                    <h1>Bem-Vindo(a) a Biblioteca </h1>
+                    <h2>Aqui você encontrará um catálogo com seus livros preferidos.</h2>
+                    <a id="btn-home" href="#items-container">Vamos Começar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main>
+        <div id="items-container">
+            <% livros.forEach(element => { %>
+                <div class="container-item">
+                    <a class="details" href="/details/<%= element.id %> ">
+                        <div class="container-img">
+                            <img src="<%= element.capa %> " alt="capa livro <%= element.nome %>">
+                        </div>
+                        <div class="container-title">
+                            <h3><%= element.nome %> </h3>
+                        </div>
+                    </a>
+                </div>
+            <% }) %>
+        </div> 
+    </main>
+    <%- include('./partials/footer.ejs') %> 
+</body>
+</html>
